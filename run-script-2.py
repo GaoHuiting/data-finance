@@ -2,8 +2,6 @@ import pandas as pd
 import re
 from datetime import datetime
 
-# filepath: /Users/jessicagao/Downloads/DA-test/analyze_data_quality.py
-
 # Load the file
 data_path = '/Users/jessicagao/Downloads/DA-test/new-finance-data.csv'
 
@@ -34,7 +32,7 @@ def validate_postal_code(postal_code):
 
 def validate_percentage(value):
     if pd.isnull(value) or value == '':
-        return False  # Treat empty fields as invalid
+        return False  
     try:
         value = float(value)
         return 0 <= value <= 1
