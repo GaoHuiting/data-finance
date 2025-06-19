@@ -1,4 +1,4 @@
-import pandas as pd
+eimport pandas as pd
 import re
 from datetime import datetime
 
@@ -105,7 +105,7 @@ if 'loan_id' in data.columns:
     else:
         print("No duplicates found in 'loan_id'.")
 
-# Validate other columns
+# Validate other columns except loan_id (ignore result for loan_id)
 for column, check in checks.items():
     if column in data.columns:
         invalid_records = data[~data[column].apply(check)]
